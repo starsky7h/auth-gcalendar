@@ -81,35 +81,26 @@ python -m http.server 8000
 
 ## Публикация на GitHub Pages
 
-Инструкция основана на официальной документации GitHub:
-<https://docs.github.com/ru/pages/getting-started-with-github-pages/creating-a-github-pages-site>
-и <https://docs.github.com/ru/get-started/using-github/hello-world>.
+Сайт уже опубликован:
 
-1. Репозиторий уже создан: <https://github.com/starsky7h/auth-gcalendar>. Он должен оставаться
-   **публичным**, иначе GitHub Pages не будет опубликован на бесплатном аккаунте.
-2. Файлы загружены в ветку `main` в корень репозитория.
-3. Откройте **Settings → Pages**.
-4. В блоке **Build and deployment** выберите **Source: Deploy from a branch**,
-   ветку `main` и папку `/ (root)`. Нажмите **Save**.
-5. Подождите 1–2 минуты и обновите страницу: GitHub покажет адрес сайта.
-6. Откройте сайт и проверьте все страницы и переключатель языка.
+- сайт: <https://starsky7h.github.io/auth-gcalendar/>
+- репозиторий: <https://github.com/starsky7h/auth-gcalendar> (публичный)
+- источник: **Settings → Pages → Deploy from a branch → `main` → `/ (root)`**
+- HTTPS включён.
 
-Адрес сайта после публикации:
-<https://starsky7h.github.io/auth-gcalendar/>
+Первый деплой занимает 1–2 минуты; статус сборки виден в **Settings → Pages**
+и во вкладке **Actions**. После изменений достаточно сделать commit и push —
+GitHub Pages пересоберёт сайт автоматически.
 
 Локальные команды для последующих изменений:
 
 ```powershell
-git clone https://github.com/starsky7h/auth-gcalendar.git
-cd auth-gcalendar
-# внесите правки
 git add .
 git commit -m "Update site content"
 git push
 ```
 
-После первого деплоя добавьте адрес сайта в описание репозитория (поле **Website**),
-чтобы его было видно в профиле.
+После первого деплоя адрес сайта добавлен в описание репозитория (поле **Website**).
 
 ## Настройка в Google Cloud Console
 
